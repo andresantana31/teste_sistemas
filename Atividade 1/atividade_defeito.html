@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<!--
+
+Criar uma página web e dentro dela colocar 2 inputs com o [type=”number”], 4 botões com as 4 operações matemáticas (adição, subtração, divisão e multiplicação). Todas as operações devem funcionar corretamente.
+
+Criar uma cópia da página criada no passo 1, e fazer com que alguma das funções matemáticas tenham pelo menos um defeito (mas nenhum erro, e nenhuma falha)
+
+Criar uma cópia da página criada no passo 1, e fazer com que alguma das funções matemáticas tenham pelo menos um erro e/ou uma falha
+-->
+
+<body>
+    <div>
+        <h1>Calculadora</h1>
+        <br>
+        Valor 1
+        <input id="num1" type="number" placeholder="Número">
+        <br><br>
+        Valor 2
+        <input id="num2" type="number" placeholder="Número">
+        <br><br>
+        <h3>Resultado!</h3>
+        <p id="resultado"></p>
+
+        <br><br>
+        <button onclick="soma()">Adição</button>
+        <button onclick="subtracao()">Subtração</button>
+        <button onclick="divisao()">Divisão</button>
+        <button onclick="multiplicao()">Multiplicação</button>
+    </div>
+    
+    <script>
+        
+        const num1 = document.getElementById('num1');
+        const num2 = document.getElementById('num2');
+        const result = document.getElementById('resultado');
+
+        function soma(){ 
+            if(!num1.value || !num2.value)
+            {
+                result.innerHTML = 'Favor, preencher os campos';
+                console.log(resultado);
+            }
+            else
+            {
+                result.innerHTML = parseFloat(num1.value) + parseFloat(num2.value);
+
+                console.log(resultado);
+        
+            }
+        }
+        function subtracao(){ 
+            if(!num1.value || !num2.value)
+            {
+                result.innerHTML = 'Favor, preencher os campos';
+                console.log(resultado);
+            }
+            else
+            {
+                result.innerHTML = parseFloat(num1.value) * parseFloat(num2.value);
+                console.log(resultado);
+            }
+        }
+        function divisao(){ 
+            if(!num1.value || !num2.value)
+            {
+                result.innerHTML = 'Favor, preencher os campos';
+                console.log(resultado);
+            }
+            else
+            {
+                result.innerHTML = parseFloat(num1.value) / parseFloat(num2.value);
+                console.log(resultado);
+            }
+        }
+        function multiplicao(){ 
+            if(!num1.value || !num2.value)
+            {
+                result.innerHTML = 'Favor, preencher os campos';
+                console.log(resultado);
+            }
+            else
+            {
+                result.innerHTML = parseFloat(num1.value) - parseFloat(num2.value);
+                console.log(resultado);
+            }
+        }
+
+    </script>
+</body>
+</html>
